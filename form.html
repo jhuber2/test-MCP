@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Site - Profile Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Profile Form</h1>
+    <nav aria-label="Main navigation">
+      <a id="nav-home" href="index.html">Home</a><a id="nav-login" href="login.html">Login</a><a id="nav-form" href="form.html">Form</a>
+    </nav>
+  </header>
+  <main>
+    <form id="profile-form" class="card" novalidate>
+      <div class="form-group"><label for="full-name">Full name</label><input id="full-name" name="fullName" type="text" required></div>
+      <div class="form-group"><label for="contact-email">Contact email</label><input id="contact-email" name="contactEmail" type="email" required></div>
+      <div class="form-group">
+        <label for="role-select">Role</label>
+        <select id="role-select" name="role" required><option value="">Select a role</option><option value="developer">Developer</option><option value="tester">Tester</option><option value="manager">Manager</option></select>
+      </div>
+      <fieldset id="contact-method-group">
+        <legend>Preferred contact method</legend>
+        <label class="choice-label" for="contact-email-radio"><input id="contact-email-radio" name="contactMethod" type="radio" value="email" checked>Email</label>
+        <label class="choice-label" for="contact-phone-radio"><input id="contact-phone-radio" name="contactMethod" type="radio" value="phone">Phone</label>
+      </fieldset>
+      <div class="form-group"><label class="choice-label" for="terms-checkbox"><input id="terms-checkbox" name="terms" type="checkbox" required>I accept the terms</label></div>
+      <button id="form-submit" type="submit">Submit profile</button>
+      <button id="form-reset" type="reset">Reset</button>
+      <p id="form-message" class="message" role="status" aria-live="polite" hidden></p>
+    </form>
+  </main>
+  <footer><p>&copy; 2026 Automation Test Site</p></footer>
+</body>
+</html>
